@@ -6,13 +6,14 @@ micromamba config append channels conda-forge
 
 # Create a new environment
 micromamba create -n 690py312 python=3.12
+micromamba activate 690py312
 
 # Install pyutils (private module)
 git clone https://github.com/janbridley/pyutils.git
 cd pyutils
 pip install .
 cd ..
-rm -r pyutils
+rm -rf pyutils
 
 # Set up function to ask for execution
 prompt_and_execute() {
