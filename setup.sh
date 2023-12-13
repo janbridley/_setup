@@ -8,6 +8,9 @@ micromamba config append channels conda-forge
 micromamba create -n 690py312 python=3.12
 micromamba activate 690py312
 
+# Install ovito python package
+micromamba install --strict-channel-priority -c https://conda.ovito.org -c conda-forge ovito
+
 # Install pyutils (private module)
 git clone https://github.com/janbridley/pyutils.git
 cd pyutils
