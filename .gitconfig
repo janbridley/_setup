@@ -1,0 +1,26 @@
+[user]
+	name = janbridley
+	email = bradleyjenj@gmail.com
+[credential]
+	helper = osxkeychain
+[core]
+	excludesfile = /Users/jenbradley/.gitignore
+	editor = nano
+	autocrlf = input
+
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+[init]
+	defaultBranch = main
+[alias]
+	uncommit = reset HEAD^
+	unstage = reset HEAD --
+	last = !git log -1 HEAD --color | cat
+	lg = !git log --oneline --graph --color --decorate -15 | cat
+	st = status -sb
+	ls = st
+[branch]
+	autoSetupMerge = True
