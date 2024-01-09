@@ -1,3 +1,7 @@
+# Set up gitconfig file
+mv ~/.gitconfig ~/.gitconfig.bak
+cp .gitconfig ~/.gitconfig
+
 # Install micromamba
 "${SHELL}" <(curl -L micro.mamba.pm/install.sh)
 
