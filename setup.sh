@@ -15,6 +15,9 @@ prompt_and_execute() {
     fi
 }
 
+# Install bash version of rmate
+wget -O ~/rmate https://raw.githubusercontent.com/aurora/rmate/master/rmate
+
 # Install oh-my-zsh (optional)
 prompt_and_execute "Do you want to install oh-my-zsh?" "sh -c \'$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)\'"
 
@@ -92,6 +95,9 @@ else
     # Append the lines to ~/.bashrc
     echo "$mmfun" >> ~/.bashrc
 fi
+
+# Add rmate alias to zshrc
+echo 'alias rmate="~/rmate"' >> ~/.zshrc
 
 echo "Setup complete :D"
 
