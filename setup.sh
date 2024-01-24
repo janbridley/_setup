@@ -97,7 +97,7 @@ else
 fi
 
 # Add rmate alias to zshrc
-echo 'alias rmate="~/rmate"' >> ~/.zshrc
+echo 'alias rsubl="~/rmate"' >> ~/.zshrc
 
 echo "Setup complete :D"
 
